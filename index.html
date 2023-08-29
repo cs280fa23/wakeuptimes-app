@@ -14,6 +14,15 @@
       if you've completed several cycles prior to waking up.
     </p>
     <p>If you go to bed now, when should you wake up?</p>
-    <button>Calculate</button>
+    <button id="calc-btn">Calculate</button>
+    <script>
+      const calcBtn = document.getElementById("calc-btn");
+      calcBtn.onclick = handleClick;
+      
+      function handleClick () {
+        console.log("Bam!")
+        window.alert("Boo!")
+      }
+    </script>
   </body>
 </html>
