@@ -2,9 +2,51 @@
 <html>
   <head>
     <title>WakeUpTimes App</title>
+    <style>
+      body {
+        font-size: 16px;
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        text-align: center;
+        color: #333;
+      }
+
+      h1 {
+        color: red;
+      }
+
+      p {
+        line-height: 1.5;
+      }
+
+      #calc-btn {
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid #333;
+        background-color: #fff;
+        color: #333;
+        cursor: pointer;
+      }
+
+      #calc-btn:hover {
+        background-color: #333;
+        color: #fff;
+      }
+
+      .cycle {
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid #333;
+        background-color: #fff;
+        color: #333;
+        margin: 0.5rem;
+      }
+    </style>
   </head>
-  <body style="text-align: center;"">
-    <h1 style="color: red;">WakeUpTimes App</h1>
+  <body>
+    <h1>WakeUpTimes App</h1>
     <p>
       A sleep cycle lasts about 90 minutes, and a good night's sleep consists of
       5-6 sleep cycles.
@@ -16,7 +58,8 @@
     <p>If you go to bed now, when should you wake up?</p>
     <button id="calc-btn">Calculate</button>
     <p>
-      If you go to bed right now<sup>*</sup>, try to wake up at one of these times:
+      If you go to bed right now<sup>*</sup>, try to wake up at one of these
+      times:
     </p>
     <div id="wakeup-hours-div" class="wakeup-hours">
       <div id="cycle-1" class="cycle">12:15 AM</div>
