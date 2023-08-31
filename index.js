@@ -1,4 +1,18 @@
+const clcBtn = document.getElementById("calc-btn");
+const refreshBtn = document.getElementById("refresh-btn");
+const returnBtn = document.getElementById("return-btn");
 const wakeUpHoursDiv = document.getElementById("wakeup-hours-div");
+const promptSection = document.getElementById("prompt-section");
+const imageContainer = document.getElementById("img-container");
+const resultSection = document.getElementById("result-section");
+
+clcBtn.addEventListener("click", calcWakeUpTimes);
+refreshBtn.addEventListener("click", calcWakeUpTimes);
+returnBtn.addEventListener("click", () => {
+  promptSection.classList.remove("hidden");
+  imageContainer.classList.remove("hidden");
+  resultSection.classList.add("hidden");
+});
 
 function calcWakeUpTimes() {
   const fallAsleepTime = new Date();
@@ -17,7 +31,8 @@ function calcWakeUpTimes() {
     cycleDiv.textContent = wakeUpTimeString;
     wakeUpHoursDiv.appendChild(cycleDiv);
   }
-}
 
-const calcBtn = document.getElementById("calc-btn");
-calcBtn.onclick = calcWakeUpTimes;
+  promptSection.classList.add("hidden");
+  imageContainer.classList.add("hidden");
+  resultSection.classList.remove("hidden");
+}
